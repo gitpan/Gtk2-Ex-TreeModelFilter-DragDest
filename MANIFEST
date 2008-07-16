@@ -1,0 +1,20 @@
+COPYING
+debian/changelog
+debian/compat
+debian/control
+debian/copyright
+debian/rules
+debian/watch
+devel/dragdest.pl
+examples/demo.pl
+examples/treesdemo.pl
+lib/Gtk2/Ex/TreeModelFilter/DragDest.pm
+lib/Gtk2/Ex/TreeModelFilter/Draggable.pm
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+README
+SIGNATURE
+t/Draggable.t
+t/pod.t
+META.yml                                 Module meta-data (added by MakeMaker)

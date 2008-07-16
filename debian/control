@@ -1,0 +1,36 @@
+# Copyright 2008 Kevin Ryde
+
+# This file is part of Gtk2-Ex-TreeModelFilter-DragDest.
+#
+# Gtk2-Ex-TreeModelFilter-DragDest is free software; you can redistribute it
+# and/or modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 3, or
+# (at your option) any later version.
+#
+# Gtk2-Ex-TreeModelFilter-DragDest is distributed in the hope that it will be
+# useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+# of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along
+# with Gtk2-Ex-TreeModelFilter-DragDest.  If not, see
+# <http://www.gnu.org/licenses/>.
+
+
+Source: libgtk2-ex-treemodelfilter-dragdest-perl
+Section: perl
+Priority: optional
+Build-Depends: cdbs, debhelper (>= 4)
+Maintainer: Kevin Ryde <user42@zip.com.au>
+Standards-Version: 3.8.0
+Homepage: http://www.geocities.com/user42_kevin/gtk2-ex-treemodelfilter-dragdest/index.html
+Bugs: mailto:user42@zip.com.au
+
+Package: libgtk2-ex-treemodelfilter-dragdest-perl
+Architecture: all
+Depends: libgtk2-perl (>= 1.100)
+Description: DragDest add-on for TreeModelFilter in Gtk2-Perl
+ Gtk2-Ex-TreeModelFilter-DragDest adds the TreeDragDest interface to
+ GtkTreeModelFilter objects.  As of Gtk 2.12 a filtered model is a
+ drag source, but not a drag destination.  With DragDest you can drag
+ and drop to re-order rows in a TreeView.

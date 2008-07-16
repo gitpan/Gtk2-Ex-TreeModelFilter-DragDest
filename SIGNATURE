@@ -1,0 +1,42 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 8624bcdae55baeef00cd11d5dfcfa60f68710a02 COPYING
+SHA1 f74fe136d3c71104c80281aefd37b9d4ff88cf0b MANIFEST
+SHA1 1e48a2fc19907943c888cef4060584bf8a564a33 MANIFEST.SKIP
+SHA1 0398a328471a73e0e760db296491dbc6cfe286d2 META.yml
+SHA1 93d92304da135440bf4e13822a39f889fab712c1 Makefile.PL
+SHA1 d9f300a76efb681bb60e301efbb5d3499fabcb82 README
+SHA1 4aea84179712a8de079e4ba62231bcbd34b5ea95 debian/changelog
+SHA1 1b6453892473a467d07372d45eb05abc2031647a debian/compat
+SHA1 b391de365007f07677acf915dbcf4f9b67925699 debian/control
+SHA1 75f392dcacaf91280232c0df3f72eef8fb12b8f1 debian/copyright
+SHA1 5eff44110d35c1709efdb983ba042c34124c60ad debian/rules
+SHA1 8f51c2dff57d72c21b14316d77dc8f0c76bc7d73 debian/watch
+SHA1 d4f8c1cc87db75a0e2e52e729b8d4bc4af5e3853 devel/dragdest.pl
+SHA1 81b062a67b176c7fe6fd78f4d1b16acad0fd0970 examples/demo.pl
+SHA1 151588981bb009b383270a9f8b4233a6e461638b examples/treesdemo.pl
+SHA1 1541d81f6958b4e667432b1a9be5ec138cc2294e lib/Gtk2/Ex/TreeModelFilter/DragDest.pm
+SHA1 3db3866bfec3adf6203594e0597d7946865ea296 lib/Gtk2/Ex/TreeModelFilter/Draggable.pm
+SHA1 fe1ce8a7304d719fede26567dbd00af2bbd56b55 t/Draggable.t
+SHA1 a661a39e55a4127aecb1b97a631c4f01f7dce8c6 t/pod.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iD8DBQFIfnN8LFMCIV9q3ToRAsmEAKC0gBBAnGIfp7RoAZywfpvHmLXO4wCgoxgx
+j+QMm8G6wifQMkxNbFqJsJg=
+=f/dz
+-----END PGP SIGNATURE-----
