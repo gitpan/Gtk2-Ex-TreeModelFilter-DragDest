@@ -1,4 +1,6 @@
-# Copyright 2008 Kevin Ryde
+#!/usr/bin/perl
+
+# Copyright 2008, 2009, 2010 Kevin Ryde
 
 # This file is part of Gtk2-Ex-TreeModelFilter-DragDest.
 #
@@ -16,15 +18,37 @@
 # with Gtk2-Ex-TreeModelFilter-DragDest.  If not, see
 # <http://www.gnu.org/licenses/>.
 
-
+use 5.008;
 use strict;
 use warnings;
 use Gtk2::Ex::TreeModelFilter::Draggable;
+use Test::More tests => 21;
 
-use Test::More tests => 16;
+use FindBin;
+use File::Spec;
+use lib File::Spec->catdir($FindBin::Bin,'inc');
+use MyTestHelpers;
+
+SKIP: { eval 'use Test::NoWarnings; 1'
+          or skip 'Test::NoWarnings not available', 1; }
+
+my $want_version = 2;
+is ($Gtk2::Ex::TreeModelFilter::Draggable::VERSION, $want_version,
+        'VERSION variable');
+is (Gtk2::Ex::TreeModelFilter::Draggable->VERSION, $want_version,
+        'VERSION class method');
+{ ok (eval { Gtk2::Ex::TreeModelFilter::Draggable->VERSION($want_version); 1 },
+      "VERSION class check $want_version");
+  my $check_version = $want_version + 1000;
+  ok (! eval{Gtk2::Ex::TreeModelFilter::Draggable->VERSION($check_version); 1},
+      "VERSION class check $check_version");
+}
+
 require Gtk2;
+MyTestHelpers::glib_gtk_versions();
 
-{ my $store = Gtk2::ListStore->new ('Glib::String');
+{
+  my $store = Gtk2::ListStore->new ('Glib::String');
   my $filter = Gtk2::Ex::TreeModelFilter::Draggable->new ($store);
 
   isa_ok ($filter, 'Gtk2::Ex::TreeModelFilter::Draggable');

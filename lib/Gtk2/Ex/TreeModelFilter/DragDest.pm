@@ -1,4 +1,4 @@
-# Copyright 2008 Kevin Ryde
+# Copyright 2008, 2009, 2010 Kevin Ryde
 
 # This file is part of Gtk2-Ex-TreeModelFilter-DragDest.
 #
@@ -18,12 +18,12 @@
 
 
 package Gtk2::Ex::TreeModelFilter::DragDest;
+use 5.008;
 use strict;
 use warnings;
-use Gtk2;
 use Carp;
 
-our $VERSION = 1;
+our $VERSION = 2;
 
 use constant DEBUG => 0;
 
@@ -67,7 +67,7 @@ sub _drop {
       last;
     }
     if (! $submodel->isa('Gtk2::TreeModelFilter')) {
-      if (DEBUG) { print "  no TreeDragDest child\n"; }
+      if (DEBUG) { print "  not a sub-filter\n"; }
       return;
     }
   }
@@ -122,6 +122,8 @@ sub _path_to_child_path_or_end {
 1;
 __END__
 
+=for stopwords TreeModelFilter draggability TreeDragDest Gtk Ryde DragDest
+
 =head1 NAME
 
 Gtk2::Ex::TreeModelFilter::DragDest -- drag destination mix-in for TreeModelFilter subclasses
@@ -163,7 +165,7 @@ child.  The destination path position is converted as necessary.
 
 If the drag source is the filter itself (which is usual for say dragging in
 a C<Gtk2::TreeView>) then the source row ends up being from the first
-non-filter child model.  The above drop stragegy ends up on that same child,
+non-filter child model.  The above drop strategy ends up on that same child,
 which is important for instance for a C<Gtk2::ListStore> since it only
 allows drags within itself.
 
@@ -184,11 +186,11 @@ L<Gtk2::TreeModelFilter>, L<Gtk2::TreeModel>
 
 =head1 HOME PAGE
 
-L<http://www.geocities.com/user42_kevin/gtk2-ex-treemodelfilter-dragdest/>
+L<http://user42.tuxfamily.org/gtk2-ex-treemodelfilter-dragdest/>
 
 =head1 COPYRIGHT
 
-Copyright 2008 Kevin Ryde
+Copyright 2008, 2009, 2010 Kevin Ryde
 
 Gtk2-Ex-TreeModelFilter-DragDest is free software; you can redistribute it
 and/or modify it under the terms of the GNU General Public License as

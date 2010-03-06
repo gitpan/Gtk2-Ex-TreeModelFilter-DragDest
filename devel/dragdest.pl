@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# Copyright 2008 Kevin Ryde
+# Copyright 2008, 2010 Kevin Ryde
 
 # This file is part of Gtk2-Ex-TreeModelFilter-DragDest.
 #
@@ -19,21 +19,24 @@
 # <http://www.gnu.org/licenses/>.
 
 
-package MyNewFilterModel;
+use 5.010;
 use strict;
 use warnings;
 use Gtk2;
-use base 'Gtk2::Ex::TreeModelFilter::DragDest';
-
-use Glib::Object::Subclass
-  Gtk2::TreeModelFilter::,
-  interfaces => [ 'Gtk2::TreeDragDest' ];
-
-package main;
-use strict;
-use warnings;
 use Data::Dumper;
-use Gtk2;
+
+{
+  package MyNewFilterModel;
+  use strict;
+  use warnings;
+  use Gtk2;
+  use base 'Gtk2::Ex::TreeModelFilter::DragDest';
+
+  use Glib::Object::Subclass
+    Gtk2::TreeModelFilter::,
+        interfaces => [ 'Gtk2::TreeDragDest' ];
+
+}
 
 my $tree = Gtk2::TreeStore->new ('Glib::String');
 { my $top = $tree->insert_after (undef, undef);

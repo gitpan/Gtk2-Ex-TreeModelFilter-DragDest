@@ -1,4 +1,4 @@
-# Copyright 2008 Kevin Ryde
+# Copyright 2008, 2009, 2010 Kevin Ryde
 
 # This file is part of Gtk2-Ex-TreeModelFilter-DragDest.
 #
@@ -18,12 +18,13 @@
 
 
 package Gtk2::Ex::TreeModelFilter::Draggable;
+use 5.008;
 use strict;
 use warnings;
 use Gtk2;
 use Carp;
 
-our $VERSION = 1;
+our $VERSION = 2;
 our @ISA;
 
 BEGIN {
@@ -53,9 +54,13 @@ sub new {
 1;
 __END__
 
+=for stopwords draggable TreeModelFilter DragDest subtree unfiddle Gtk TreeDragSource TreeDragDest Ryde
+
 =head1 NAME
 
 Gtk2::Ex::TreeModelFilter::Draggable -- draggable subclass of TreeModelFilter
+
+=for test_synopsis my ($child_model)
 
 =head1 SYNOPSIS
 
@@ -129,11 +134,11 @@ L<Gtk2::TreeModel>
 
 =head1 HOME PAGE
 
-L<http://www.geocities.com/user42_kevin/gtk2-ex-treemodelfilter-dragdest/>
+L<http://user42.tuxfamily.org/gtk2-ex-treemodelfilter-dragdest/>
 
 =head1 COPYRIGHT
 
-Copyright 2008 Kevin Ryde
+Copyright 2008, 2009, 2010 Kevin Ryde
 
 Gtk2-Ex-TreeModelFilter-DragDest is free software; you can redistribute it
 and/or modify it under the terms of the GNU General Public License as

@@ -1,3 +1,4 @@
+Changes
 COPYING
 debian/changelog
 debian/compat
@@ -8,6 +9,8 @@ debian/watch
 devel/dragdest.pl
 examples/demo.pl
 examples/treesdemo.pl
+inc/my_pod2html
+inc/MyMakeMakerExtras.pm
 lib/Gtk2/Ex/TreeModelFilter/DragDest.pm
 lib/Gtk2/Ex/TreeModelFilter/Draggable.pm
 Makefile.PL
@@ -15,6 +18,11 @@ MANIFEST			This list of files
 MANIFEST.SKIP
 README
 SIGNATURE
+t/0-META-read.t
+t/0-Test-DistManifest.t
+t/0-Test-Pod.t
+t/0-Test-Synopsis.t
+t/0-Test-YAML-Meta.t
 t/Draggable.t
-t/pod.t
+t/inc/MyTestHelpers.pm
 META.yml                                 Module meta-data (added by MakeMaker)
