@@ -47,12 +47,5 @@ MyMakeMakerExtras::WriteMakefile
    META_MERGE
    => { resources
         => { homepage => 'http://user42.tuxfamily.org/gtk2-ex-treemodelfilter-dragdest/index.html' },
-        optional_features
-        => { maximum_tests
-             => { description => 'Have "make test" do as much as possible.',
-                  requires => { 'Test::NoWarnings' => 0,
-                              },
-                },
-           },
       },
   );

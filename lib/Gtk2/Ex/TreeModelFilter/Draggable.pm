@@ -24,7 +24,7 @@ use warnings;
 use Gtk2;
 use Carp;
 
-our $VERSION = 2;
+our $VERSION = 3;
 our @ISA;
 
 BEGIN {

@@ -1,5 +1,5 @@
-libgtk2-ex-treemodelfilter-dragdest-perl (2-1) unstable; urgency=low
+libgtk2-ex-treemodelfilter-dragdest-perl (3-1) unstable; urgency=low
 
   * Packaged version.
 
- -- Kevin Ryde <user42@zip.com.au>  Sat, 06 Mar 2010 10:53:14 +1100
+ -- Kevin Ryde <user42@zip.com.au>  Thu, 30 Sep 2010 08:29:01 +1000

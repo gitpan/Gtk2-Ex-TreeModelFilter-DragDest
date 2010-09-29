@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 
 # Copyright 2008, 2009, 2010 Kevin Ryde
 
@@ -22,17 +22,17 @@ use 5.008;
 use strict;
 use warnings;
 use Gtk2::Ex::TreeModelFilter::Draggable;
-use Test::More tests => 21;
+use Test::More tests => 20;
 
 use FindBin;
 use File::Spec;
 use lib File::Spec->catdir($FindBin::Bin,'inc');
+
+use lib 't';
 use MyTestHelpers;
+BEGIN { MyTestHelpers::nowarnings() }
 
-SKIP: { eval 'use Test::NoWarnings; 1'
-          or skip 'Test::NoWarnings not available', 1; }
-
-my $want_version = 2;
+my $want_version = 3;
 is ($Gtk2::Ex::TreeModelFilter::Draggable::VERSION, $want_version,
         'VERSION variable');
 is (Gtk2::Ex::TreeModelFilter::Draggable->VERSION, $want_version,
